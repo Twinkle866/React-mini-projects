@@ -1,0 +1,109 @@
+/*
+ * This file contains all the styling for the calculator application.
+ * All styles are defined using standard CSS properties.
+ */
+
+/* General body styling to set the background color */
+body {
+    background-color: #111827; /* bg-gray-900 */
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Calculator container styling */
+.calculator {
+    background-color: #1f2937; /* bg-gray-800 */
+    border-radius: 1.5rem; /* rounded-3xl */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* shadow-xl */
+    width: 100%;
+    max-width: 20rem;
+    overflow: hidden;
+
+    /* The following lines use absolute positioning to center the element */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Display screen styling */
+.display {
+    background-color: #fff;
+    text-align: right;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 0.75rem; /* rounded-xl */
+    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); /* shadow-inner */
+}
+
+.expression {
+    color: #9ca3af; /* text-gray-400 */
+    font-size: 0.875rem; /* text-sm */
+    height: 1rem;
+    overflow: hidden;
+}
+
+.result {
+    color: #000;
+    font-size: 2.25rem; /* text-4xl */
+    font-weight: 600; /* font-semibold */
+    height: 3rem;
+    overflow-wrap: break-word;
+    overflow: hidden;
+}
+
+/* Button grid styling */
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 0.75rem; /* gap-3 */
+    padding: 1rem;
+}
+
+/* Common button styles */
+.calc-button {
+    width: 100%;
+    height: 4rem; /* h-16 */
+    color: #fff;
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: 600; /* font-semibold */
+    border-radius: 1rem; /* rounded-2xl */
+    transition-property: background-color;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    cursor: pointer;
+}
+
+/* Specific button styles */
+.button-clear {
+    grid-column: span 2;
+    background-color: #f97316; /* bg-orange-500 */
+}
+.button-clear:hover {
+    background-color: #ea580c; /* hover:bg-orange-600 */
+}
+
+.button-operator {
+    background-color: #374151; /* bg-gray-700 */
+}
+.button-operator:hover {
+    background-color: #4b5563; /* hover:bg-gray-600 */
+}
+
+.button-number {
+    background-color: #1f2937; /* bg-gray-800 */
+}
+.button-number:hover {
+    background-color: #4b5563; /* hover:bg-gray-700 */
+}
+
+.button-equals {
+    grid-row: span 2;
+    background-color: #374151; /* bg-gray-700 */
+}
+.button-equals:hover {
+    background-color: #4b5563; /* hover:bg-gray-600 */
+}
